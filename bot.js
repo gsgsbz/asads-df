@@ -8,6 +8,20 @@ bot.on('ready', () => {
 });
 
 
+bot.on('message', message => {
+    if (message.guild) return undefined;
+    var roomid = "530225570047459338";
+    var room = bot.channels.get(roomid);
+    if (!room) return undefined;
+    var emb = new Discord.RichEmbed()
+    .setColor("#36393e")
+    .setAuthor(message.author.username,message.author.displayAvatarURL)
+    .setDescription(`**Message from ${message.author} in the bot dm**\n\`\`\`apache\nMessage: ${message.content}\`\`\``)
+    .setThumbnail(message.author.displayAvatarURL)
+    .setTimestamp();
+    room.send(emb);
+});
+
 
  const bannedwords2 = [
 
@@ -60,4 +74,4 @@ bot.on('message',msg=>{
     }
 });
 
-bot.login(process.env.Bot_Token);
+bot.login("NTQwNjU4MzM3NDExMjM1ODYx.DzUHEQ.ELtewG8DdDCDK9Tl7J3E5n6sVwQ");
