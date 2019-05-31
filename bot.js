@@ -69,9 +69,9 @@ message.author.send("http://script.aba.ae/members/");
 
 bot.on('message',msg=>{
     if(msg.content ==="!aim"){
-        msg.reply(Math.floor(Math.random() * 370) + 130)
-        msg.reply(Math.floor(Math.random() * 38) + 12)
+        msg.reply(Math.floor(Math.random() * 300) + 130)
+        msg.reply(Math.floor(Math.random() * 30) + 12)
     }
 });
 
-bot.login("NTQwNjU4MzM3NDExMjM1ODYx.DzUHEQ.ELtewG8DdDCDK9Tl7J3E5n6sVwQ");
+bot.login(process.env.Bot_Tokenc);
