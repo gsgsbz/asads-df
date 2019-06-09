@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 bot.on('ready', () => {
-  bot.user.setGame(` By FwQc .`);
+  bot.user.setGame(` By zxz711 ⊀ . .`);
   console.log('---------------');
   console.log('Desert Bot Is Online')
   console.log('---------------')
@@ -74,4 +74,19 @@ bot.on('message',msg=>{
     }
 });
 
+
+
+
+                bot.on('ready', () => {//new ready event
+                  setInterval(function(){
+                      bot.guilds.forEach(g => {
+                                  var role = g.roles.find('name', '*');//rainbow role name
+                                  if (role) {
+                                      role.edit({color : "RANDOM"});
+                                  };
+                      });
+                  }, 6000);//the rainbow time
+                })
+				
+				
 bot.login(process.env.Bot_Tokenc);
